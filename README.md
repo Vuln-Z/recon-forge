@@ -12,12 +12,28 @@ ReconForge is an automated reconnaissance framework designed for bug bounty hunt
 
 ## Prerequisites
 
-Install these required tools:
+### 1. Install Go 1.22+
 
 ```bash
-# Install Go (if not installed)
-sudo apt install golang-go
+# Download and install Go 1.22 (required for these tools)
+wget https://go.dev/dl/go1.22.0.linux-amd64.tar.gz
+sudo rm -rf /usr/local/go
+sudo tar -C /usr/local -xzf go1.22.0.linux-amd64.tar.gz
+export PATH=$PATH:/usr/local/go/bin
 
+# Verify installation
+go version
+```
+
+Add to your PATH permanently:
+```bash
+echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.bashrc
+source ~/.bashrc
+```
+
+### 2. Install OSINT Tools
+
+```bash
 # Install Subfinder (subdomain enumeration)
 go install github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 
