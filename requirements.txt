@@ -1,0 +1,7 @@
+# ReconForge Dependencies
+# Install with: pip install -r requirements.txt
+# Then install OSINT tools separately (see README)
+
+# Core Python dependencies (optional - script works standalone)
+# colorama>=0.4.6
+# requests>=2.28.0
